@@ -13,7 +13,7 @@ $ npm install --global indent-string-cli
 ## Usage
 
 ```
-$ strip-ansi --help
+$ indent-string --help
 
   Usage
     $ indent-string <string> [--indent=<string>] [--count=<number>]
