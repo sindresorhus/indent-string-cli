@@ -16,11 +16,11 @@ $ npm install --global indent-string-cli
 $ indent-string --help
 
   Usage
-    $ indent-string <string> [--indent=<string>] [--count=<number>]
+    $ indent-string <string> [--count=<number>] [--indent=<string>]
     $ cat file.txt | indent-string > indented-file.txt
 
   Example
-    $ indent-string "$(printf 'Unicorns\nRainbows\n')" --indent=♥ --count=4
+    $ indent-string "$(printf 'Unicorns\nRainbows\n')" --count=4 --indent=♥
     ♥♥♥♥Unicorns
     ♥♥♥♥Rainbows
 ```
@@ -33,4 +33,4 @@ $ indent-string --help
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

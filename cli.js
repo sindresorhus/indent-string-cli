@@ -1,32 +1,29 @@
 #!/usr/bin/env node
 'use strict';
-var meow = require('meow');
-var indentString = require('indent-string');
+const meow = require('meow');
+const indentString = require('indent-string');
 
-var cli = meow({
-	help: [
-		'Usage',
-		'  $ indent-string <string> [--indent=<string>] [--count=<number>]',
-		'  $ cat file.txt | indent-string > indented-file.txt',
-		'',
-		'Example',
-		'  $ indent-string "$(printf \'Unicorns\\nRainbows\\n\')" --indent=♥ --count=4',
-		'  ♥♥♥♥Unicorns',
-		'  ♥♥♥♥Rainbows'
-	]
-}, {
+const cli = meow(`
+	Usage
+	  $ indent-string <string> [--count=<number>] [--indent=<string>]
+	  $ cat file.txt | indent-string > indented-file.txt
+
+	Example
+	  $ indent-string "$(printf \'Unicorns\\nRainbows\\n\')" --count=4 --indent=♥
+	  ♥♥♥♥Unicorns
+	  ♥♥♥♥Rainbows
+`, {
 	string: ['_']
 });
 
-var input = cli.input[0];
-var flags = cli.flags;
+const input = cli.input[0];
 
 function init(data) {
-	console.log(indentString(data, flags.indent || ' ', flags.count));
+	console.log(indentString(data, cli.flags.count, cli.flags.indent));
 }
 
 if (!input && process.stdin.isTTY) {
-	console.error('Input required');
+	console.error('Specify a string');
 	process.exit(1);
 }
 
