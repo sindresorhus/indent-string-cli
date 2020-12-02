@@ -1,14 +1,12 @@
-# indent-string-cli [![Build Status](https://travis-ci.org/sindresorhus/indent-string-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/indent-string-cli)
+# indent-string-cli
 
 > Indent each line in a string
-
 
 ## Install
 
 ```
 $ npm install --global indent-string-cli
 ```
-
 
 ## Usage
 
@@ -25,12 +23,6 @@ $ indent-string --help
     ♥♥♥♥Rainbows
 ```
 
-
 ## Related
 
 - [indent-string](https://github.com/sindresorhus/indent-string) - API for this module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

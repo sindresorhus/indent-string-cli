@@ -1,47 +1,45 @@
 {
-  "name": "indent-string-cli",
-  "version": "2.0.0",
-  "description": "Indent each line in a string",
-  "license": "MIT",
-  "repository": "sindresorhus/indent-string-cli",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "bin": {
-    "indent-string": "cli.js"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "cli.js"
-  ],
-  "keywords": [
-    "cli-app",
-    "cli",
-    "indent",
-    "string",
-    "str",
-    "pad",
-    "align",
-    "line",
-    "text"
-  ],
-  "dependencies": {
-    "indent-string": "^3.0.0",
-    "meow": "^3.7.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "execa": "^0.4.0",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "indent-string-cli",
+	"version": "2.0.0",
+	"description": "Indent each line in a string",
+	"license": "MIT",
+	"repository": "sindresorhus/indent-string-cli",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"bin": {
+		"indent-string": "cli.js"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"cli.js"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"indent",
+		"string",
+		"str",
+		"pad",
+		"align",
+		"line",
+		"text"
+	],
+	"dependencies": {
+		"indent-string": "^3.0.0",
+		"meow": "^3.7.0"
+	},
+	"devDependencies": {
+		"ava": "^1",
+		"execa": "^0.4.0",
+		"xo": "^0.20.0"
+	}
 }

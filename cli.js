@@ -9,7 +9,7 @@ const cli = meow(`
 	  $ cat file.txt | indent-string > indented-file.txt
 
 	Example
-	  $ indent-string "$(printf \'Unicorns\\nRainbows\\n\')" --count=4 --indent=♥
+	  $ indent-string "$(printf 'Unicorns\\nRainbows\\n')" --count=4 --indent=♥
 	  ♥♥♥♥Unicorns
 	  ♥♥♥♥Rainbows
 `, {
