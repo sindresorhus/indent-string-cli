@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const indentString = require('indent-string');
+import process from 'node:process';
+import meow from 'meow';
+import getStdin from 'get-stdin';
+import indentString from 'indent-string';
 
 const cli = meow(`
 	Usage
@@ -13,13 +14,14 @@ const cli = meow(`
 	  ♥♥♥♥Unicorns
 	  ♥♥♥♥Rainbows
 `, {
-	string: ['_']
+	importMeta: import.meta,
 });
 
 const input = cli.input[0];
+const {count, indent} = cli.flags;
 
 function init(data) {
-	console.log(indentString(data, cli.flags.count, cli.flags.indent));
+	console.log(indentString(data, count, {indent}));
 }
 
 if (!input && process.stdin.isTTY) {
@@ -30,6 +32,7 @@ if (!input && process.stdin.isTTY) {
 if (input) {
 	init(input);
 } else {
-	process.stdin.setEncoding('utf8');
-	process.stdin.on('data', init);
+	(async () => {
+		init(await getStdin());
+	})();
 }
